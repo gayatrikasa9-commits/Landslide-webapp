@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+        
+        <h1>Analysis Report</h1>
+        
+        <div class="stat-box">
+            <h2>{{ percent }}%</h2>
+            <span>Landslide Affected Area</span>
+        </div>
+
+        <div class="results-grid">
+            <div class="result-item">
+                <img src="{{ url_for('static', filename='uploads/' + original) }}" alt="Original">
+                <h3>Original Satellite Image</h3>
+            </div>
+
+            <div class="result-item">
+                <img src="{{ url_for('static', filename='outputs/' + mask) }}" alt="Mask">
+                <h3>Predicted Binary Mask</h3>
+            </div>
+
+            <div class="result-item">
+                <img src="{{ url_for('static', filename='outputs/' + overlay) }}" alt="Overlay">
+                <h3>Overlay Visualization</h3>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <a href="{{ url_for('home') }}" class="btn btn-outline">Analyze Another Image</a>
+            
+            <a href="{{ url_for('download_file', filename=mask) }}" class="btn btn-outline">Download Mask</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

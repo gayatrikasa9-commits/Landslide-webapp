@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Satellite Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h1>Analyze Imagery</h1>
+            <p>Upload a satellite image to detect landslide zones.</p>
+
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <div class="upload-area" id="drop-area">
+                    <label for="file-upload" class="file-label">
+                        <span id="file-name">Click to browse satellite images</span>
+                    </label>
+                    <input id="file-upload" type="file" name="file" accept="image/*" required>
+                </div>
+                
+                <button type="submit" class="btn">Start Prediction</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to show filename after selection
+        document.getElementById('file-upload').addEventListener('change', function(event) {
+            const fileName = event.target.files[0] ? event.target.files[0].name : "Click to browse satellite images";
+            document.getElementById('file-name').textContent = "Selected: " + fileName;
+            document.getElementById('drop-area').style.borderColor = "#CAFFBF"; // Change border to green
+        });
+    </script>
+
+</body>
+</html>
