@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landslide Detection AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card" style="border: none; box-shadow: none; background: transparent;">
+            <div style="margin-bottom: 20px;">
+                <h1 style="font-size: 3.5rem; color: #7CA5B8;">Landslide Detection System</h1>
+            </div>
+            <h1>U-Net Model</h1>
+            <p>
+                Leveraging U-Net Deep Learning architecture to identify and segment<br>
+                landslide-affected areas from satellite imagery with precision.
+            </p>
+            <br>
+            <a href="{{ url_for('home') }}" class="btn">Launch Application</a>
+        </div>
+    </div>
+
+    <footer>
+        Powered by TensorFlow & U-Net Architecture
+    </footer>
+
+</body>
+</html>
