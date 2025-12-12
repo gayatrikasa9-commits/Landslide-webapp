@@ -125,3 +125,4 @@ Mobile app
 ✔ Can be deployed anywhere
 ⭐ 11. Summary 
 This project is a web-based deep learning system that detects landslides from satellite images using the U-Net architecture. Users upload an image, the backend processes it using a trained segmentation model, and the website displays the landslide-affected regions clearly.   
+Thanks to @BrainovisionSolutions for supporting this project.
